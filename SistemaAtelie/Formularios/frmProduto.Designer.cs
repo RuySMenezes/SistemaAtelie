@@ -168,6 +168,7 @@ namespace SistemaAtelie.Formularios
             this.btEditar.TabIndex = 11;
             this.btEditar.Text = "Editar";
             this.btEditar.UseVisualStyleBackColor = false;
+            this.btEditar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btEditar_MouseClick);
             // 
             // btCadastrar
             // 

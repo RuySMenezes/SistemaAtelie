@@ -45,7 +45,7 @@ namespace SistemaAtelie.Formularios
 
             Classes.Produto produto = new Classes.Produto(nome, valor, descricao, quantidade);
             produto.cdProduto();
-
+            listagem();
 
         }
 
@@ -75,6 +75,11 @@ namespace SistemaAtelie.Formularios
                 conexao.desconectar();
             }
             
+        }
+
+        private void btEditar_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
