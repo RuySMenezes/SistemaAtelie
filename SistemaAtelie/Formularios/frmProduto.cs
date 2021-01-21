@@ -14,10 +14,9 @@ namespace SistemaAtelie.Formularios
 {
     public partial class frmProduto : Form
     {
-        Thread voltar;
 
-        Banco_de_Dados.Conexao conexao = new Banco_de_Dados.Conexao();
-        SqlCommand cmd = new SqlCommand();
+        Thread voltar;
+        int idProduto;
 
         public frmProduto()
         {
@@ -26,60 +25,88 @@ namespace SistemaAtelie.Formularios
 
         }
 
-              private void btVoltar_MouseClick(object sender, MouseEventArgs e)
+
+        //Listagem de Produtos
+        private void listagem()
+        {
+            Classes.Produto list = new Classes.Produto();
+            try
+            {
+                dgProduto.DataSource = list.listarProduto();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Listagem Falhou! Verifique a conexão com o banco");
+            }
+
+        }
+
+
+
+        #region Eventos
+
+        //Selecionar Dados na DataGridView
+
+        private void dgProduto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dgProduto.SelectedRows[0];
+
+            idProduto = Int32.Parse(row.Cells["idProduto"].Value.ToString());
+            tbNome.Text = row.Cells["Nome"].Value.ToString();
+            tbValor.Text = row.Cells["Valor"].Value.ToString();
+            tbDescricao.Text = row.Cells["Descricao"].Value.ToString();
+            tbQuantidade.Text = row.Cells["Quantidade"].Value.ToString();
+        }
+
+
+        //Botão Voltar
+        private void novoform()
+        {
+            Application.Run(new frmTelaPrincipal());
+        }
+
+        private void btVoltar_MouseClick(object sender, MouseEventArgs e)
         {
             this.Close();
             voltar = new Thread(novoform);
             voltar.SetApartmentState(ApartmentState.STA);
             voltar.Start();
         }
-        private void novoform()
-        {
-            Application.Run(new frmTelaPrincipal());
-        }
 
+
+        //Botão Cadastrar
         private void btCadastrar_MouseClick(object sender, MouseEventArgs e)
         {
             string nome= tbNome.Text, valor = tbValor.Text, descricao = tbDescricao.Text;
             int quantidade = Int32.Parse(tbQuantidade.Text);
 
             Classes.Produto produto = new Classes.Produto(nome, valor, descricao, quantidade);
-            produto.cdProduto();
+            produto.cadastrarProduto();
             listagem();
 
         }
 
-        public void listagem()
-        {
-            //Comando Sql -- insert, update, delete
-            cmd.CommandText = "Select * from Produto ";
-
-            try
-            {
-                //conectar com banco
-                cmd.Connection = conexao.conectar();
-                //executar comando
-                             
-                
-                SqlDataAdapter adaptador = new SqlDataAdapter();
-                adaptador.SelectCommand = cmd;
-                DataTable mamaco = new DataTable();
-                adaptador.Fill(mamaco);
-                dgProduto.DataSource = mamaco;
-                conexao.desconectar();
-            }
-            catch (SqlException e)
-            {
-                
-                //desconectar
-                conexao.desconectar();
-            }
-            
-        }
-
+        //Botão Editar
         private void btEditar_MouseClick(object sender, MouseEventArgs e)
         {
+            string nome = tbNome.Text, valor = tbValor.Text, descricao = tbDescricao.Text;
+            int quantidade = Int32.Parse(tbQuantidade.Text);
+
+            Classes.Produto produto = new Classes.Produto(nome, valor, descricao, quantidade, idProduto);
+            produto.editarProduto();
+
+            listagem();
+        }
+
+        //Formulario Carregado
+        private void frmProduto_Load(object sender, EventArgs e)
+        {
 
         }
+
+
+        #endregion
+
+
     }
 }

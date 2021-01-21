@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,20 +12,26 @@ namespace SistemaAtelie.Classes
     {
         Banco_de_Dados.Conexao conexao = new Banco_de_Dados.Conexao();
         SqlCommand cmd = new SqlCommand();
+
         public String mensagem;
         string nome, valor, descricao;
         int quantidade, id;
 
-        public Produto(string nome, string valor, string descricao, int quantidade)
+
+        //Construtor com parametros opcionais
+        public Produto(string nome = null, string valor = null, string descricao = null, int quantidade = 0, int id = 0)
         {
             this.nome = nome;
             this.valor = valor;
             this.descricao = descricao;
             this.quantidade = quantidade;
+            this.id = id;
 
         }
 
-        public void cdProduto()
+
+        //Cadastrar Produto
+        public void cadastrarProduto()
         {
             //Comando Sql -- insert, update, delete
             cmd.CommandText = "insert into Produto (Nome, Valor, Quantidade, Descricao) values (@nome, @valor, @quantidade, @descricao)";
@@ -56,10 +63,12 @@ namespace SistemaAtelie.Classes
             Console.WriteLine(mensagem);
         }
 
-        public void edProduto ()
+
+        //Editar Produto
+        public void editarProduto ()
         {
             //Comando Sql -- insert, update, delete
-            cmd.CommandText = "update Produto set (Nome = @nome, Valor = @valor, Quantidade = @quantidade, Descricao = @descricao) where (idProduto = @id)";
+            cmd.CommandText = "UPDATE Produto SET Nome = @nome, Valor = @valor, Quantidade = @quantidade, Descricao = @descricao WHERE idProduto = @id";
 
             //paramentros
             cmd.Parameters.AddWithValue("@nome", nome);
@@ -88,7 +97,9 @@ namespace SistemaAtelie.Classes
             Console.WriteLine(mensagem);
         }
 
-        public void ltProduto()
+
+        //Listar Produtos (Sem Filtros)
+        public DataTable listarProduto()
         {
             //Comando Sql -- insert, update, delete
             cmd.CommandText = "Select * from Produto ";
@@ -105,15 +116,24 @@ namespace SistemaAtelie.Classes
                 this.mensagem = "Pesquisado!!";
                 SqlDataAdapter adaptador = new SqlDataAdapter();
                 adaptador.SelectCommand = cmd;
-                
+                DataTable mamaco = new DataTable();
+                adaptador.Fill(mamaco);
+
+                conexao.desconectar();
+                Console.WriteLine(mensagem);
+
+                return mamaco;
             }
             catch (SqlException e)
             {
                 this.mensagem = e.ToString();
+
                 //desconectar
                 conexao.desconectar();
+                Console.WriteLine(mensagem);
+
+                return null;
             }
-            Console.WriteLine(mensagem);
         }
 
 

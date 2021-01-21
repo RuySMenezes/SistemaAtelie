@@ -15,8 +15,10 @@ namespace SistemaAtelie.Banco_de_Dados
         //Construtor
         public Conexao()
         {
-            con.ConnectionString = @"Data Source=DESKTOP-JKDMOTU\SQLEXPRESS;Initial Catalog=MimosAtelie;Integrated Security=True";
-
+            con.ConnectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=MimosAtelie;Integrated Security=True";
+                                    
+            //Codigo para conexão do banco do Ruy caso necessario
+            //Data Source=DESKTOP-JKDMOTU\SQLEXPRESS;Initial Catalog=MimosAtelie;Integrated Security=True
         }
 
         //Metodo Conectar
