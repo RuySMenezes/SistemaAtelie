@@ -36,7 +36,6 @@ namespace SistemaAtelie.Formularios
             this.tbNome = new System.Windows.Forms.TextBox();
             this.tbValor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btPesquisar = new System.Windows.Forms.Button();
             this.btExcluir = new System.Windows.Forms.Button();
             this.btEditar = new System.Windows.Forms.Button();
             this.btCadastrar = new System.Windows.Forms.Button();
@@ -74,7 +73,7 @@ namespace SistemaAtelie.Formularios
             this.label1.Location = new System.Drawing.Point(218, 60);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 27);
+            this.label1.Size = new System.Drawing.Size(74, 33);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome";
             // 
@@ -86,7 +85,7 @@ namespace SistemaAtelie.Formularios
             this.label2.Location = new System.Drawing.Point(681, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 27);
+            this.label2.Size = new System.Drawing.Size(73, 33);
             this.label2.TabIndex = 2;
             this.label2.Text = "Valor";
             // 
@@ -98,7 +97,7 @@ namespace SistemaAtelie.Formularios
             this.label3.Location = new System.Drawing.Point(938, 68);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 27);
+            this.label3.Size = new System.Drawing.Size(143, 33);
             this.label3.TabIndex = 3;
             this.label3.Text = "Quantidade";
             // 
@@ -121,7 +120,6 @@ namespace SistemaAtelie.Formularios
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.btPesquisar);
             this.panel1.Controls.Add(this.btExcluir);
             this.panel1.Controls.Add(this.btEditar);
             this.panel1.Controls.Add(this.btCadastrar);
@@ -138,21 +136,6 @@ namespace SistemaAtelie.Formularios
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1343, 207);
             this.panel1.TabIndex = 6;
-            // 
-            // btPesquisar
-            // 
-            this.btPesquisar.BackColor = System.Drawing.Color.White;
-            this.btPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btPesquisar.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btPesquisar.ForeColor = System.Drawing.Color.Black;
-            this.btPesquisar.Location = new System.Drawing.Point(919, 146);
-            this.btPesquisar.Margin = new System.Windows.Forms.Padding(2);
-            this.btPesquisar.Name = "btPesquisar";
-            this.btPesquisar.Size = new System.Drawing.Size(94, 41);
-            this.btPesquisar.TabIndex = 11;
-            this.btPesquisar.Text = "Pesquisar";
-            this.btPesquisar.UseVisualStyleBackColor = false;
             // 
             // btExcluir
             // 
@@ -217,13 +200,13 @@ namespace SistemaAtelie.Formularios
             this.label4.Location = new System.Drawing.Point(52, 141);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 27);
+            this.label4.Size = new System.Drawing.Size(116, 33);
             this.label4.TabIndex = 8;
             this.label4.Text = "Descrição";
             // 
             // tbQuantidade
             // 
-            this.tbQuantidade.Location = new System.Drawing.Point(1058, 66);
+            this.tbQuantidade.Location = new System.Drawing.Point(1085, 69);
             this.tbQuantidade.Margin = new System.Windows.Forms.Padding(2);
             this.tbQuantidade.Name = "tbQuantidade";
             this.tbQuantidade.Size = new System.Drawing.Size(54, 20);
@@ -285,6 +268,5 @@ namespace SistemaAtelie.Formularios
         private System.Windows.Forms.Button btEditar;
         private System.Windows.Forms.Button btCadastrar;
         private System.Windows.Forms.Button btVoltar;
-        private System.Windows.Forms.Button btPesquisar;
     }
 }
