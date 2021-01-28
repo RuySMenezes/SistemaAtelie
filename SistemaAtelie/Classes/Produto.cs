@@ -136,7 +136,42 @@ namespace SistemaAtelie.Classes
             }
         }
 
+        // Excluir produto
+        public void excluirProduto()
+        {
+            //Comando Sql -- insert, update, delete
+            cmd.CommandText = "DELETE * from Produto  WHERE idProduto = @id";
 
+            
+            cmd.Parameters.AddWithValue("@id", id);
+
+            try
+            {
+                //conectar com banco
+                cmd.Connection = conexao.conectar();
+                //executar comando
+                cmd.ExecuteNonQuery();
+                //desconectar
+                conexao.desconectar();
+                //mostrar mensagem de erro ou sucesso
+                this.mensagem = "Deletado!!";
+                
+
+                
+            }
+            catch (SqlException e)
+            {
+                this.mensagem = e.ToString();
+
+                //desconectar
+                conexao.desconectar();
+                Console.WriteLine(mensagem);
+
+                
+            }
+        }
     }
+
+    
 }
 

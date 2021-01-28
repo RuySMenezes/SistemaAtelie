@@ -105,8 +105,39 @@ namespace SistemaAtelie.Formularios
         }
 
 
+
         #endregion
+        // Botão Excluir
+        private void btExcluir_MouseClick(object sender, MouseEventArgs e)
+        {
 
+            string nome = tbNome.Text, valor = tbValor.Text, descricao = tbDescricao.Text;
+            int quantidade = Int32.Parse(tbQuantidade.Text);
 
+            Classes.Produto produto = new Classes.Produto(nome, valor, descricao, quantidade, idProduto);
+            produto.excluirProduto();
+
+            listagem();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbValor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btCadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

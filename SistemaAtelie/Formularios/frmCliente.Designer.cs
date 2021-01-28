@@ -52,10 +52,10 @@ namespace SistemaAtelie.Formularios
             this.btVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btVoltar.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btVoltar.Location = new System.Drawing.Point(14, 699);
-            this.btVoltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btVoltar.Location = new System.Drawing.Point(11, 404);
+            this.btVoltar.Margin = new System.Windows.Forms.Padding(2);
             this.btVoltar.Name = "btVoltar";
-            this.btVoltar.Size = new System.Drawing.Size(98, 53);
+            this.btVoltar.Size = new System.Drawing.Size(98, 37);
             this.btVoltar.TabIndex = 10;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = false;
@@ -65,14 +65,14 @@ namespace SistemaAtelie.Formularios
             // 
             this.dgCliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCliente.Location = new System.Drawing.Point(234, 368);
-            this.dgCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgCliente.Location = new System.Drawing.Point(33, 205);
+            this.dgCliente.Margin = new System.Windows.Forms.Padding(2);
             this.dgCliente.Name = "dgCliente";
             this.dgCliente.ReadOnly = true;
             this.dgCliente.RowHeadersWidth = 51;
             this.dgCliente.RowTemplate.Height = 24;
             this.dgCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgCliente.Size = new System.Drawing.Size(1043, 384);
+            this.dgCliente.Size = new System.Drawing.Size(838, 195);
             this.dgCliente.TabIndex = 8;
             this.dgCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCliente_CellClick);
             this.dgCliente.Click += new System.EventHandler(this.dgCliente_Click);
@@ -89,10 +89,10 @@ namespace SistemaAtelie.Formularios
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(69, 88);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(33, 23);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1343, 207);
+            this.panel1.Size = new System.Drawing.Size(838, 170);
             this.panel1.TabIndex = 9;
             // 
             // btExcluir
@@ -102,10 +102,10 @@ namespace SistemaAtelie.Formularios
             this.btExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btExcluir.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btExcluir.Location = new System.Drawing.Point(1168, 146);
-            this.btExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btExcluir.Location = new System.Drawing.Point(687, 118);
+            this.btExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(94, 41);
+            this.btExcluir.Size = new System.Drawing.Size(108, 41);
             this.btExcluir.TabIndex = 12;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.UseVisualStyleBackColor = false;
@@ -117,10 +117,10 @@ namespace SistemaAtelie.Formularios
             this.btEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btEditar.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditar.ForeColor = System.Drawing.Color.Black;
-            this.btEditar.Location = new System.Drawing.Point(990, 146);
-            this.btEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btEditar.Location = new System.Drawing.Point(687, 68);
+            this.btEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btEditar.Name = "btEditar";
-            this.btEditar.Size = new System.Drawing.Size(94, 41);
+            this.btEditar.Size = new System.Drawing.Size(108, 41);
             this.btEditar.TabIndex = 11;
             this.btEditar.Text = "Editar";
             this.btEditar.UseVisualStyleBackColor = false;
@@ -133,10 +133,10 @@ namespace SistemaAtelie.Formularios
             this.btCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btCadastrar.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCadastrar.ForeColor = System.Drawing.Color.Black;
-            this.btCadastrar.Location = new System.Drawing.Point(812, 146);
-            this.btCadastrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btCadastrar.Location = new System.Drawing.Point(687, 16);
+            this.btCadastrar.Margin = new System.Windows.Forms.Padding(2);
             this.btCadastrar.Name = "btCadastrar";
-            this.btCadastrar.Size = new System.Drawing.Size(102, 41);
+            this.btCadastrar.Size = new System.Drawing.Size(108, 41);
             this.btCadastrar.TabIndex = 10;
             this.btCadastrar.Text = "Cadastrar";
             this.btCadastrar.UseVisualStyleBackColor = false;
@@ -144,26 +144,26 @@ namespace SistemaAtelie.Formularios
             // 
             // tbTelefone
             // 
-            this.tbTelefone.Location = new System.Drawing.Point(512, 113);
-            this.tbTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbTelefone.Location = new System.Drawing.Point(106, 118);
+            this.tbTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.tbTelefone.Name = "tbTelefone";
-            this.tbTelefone.Size = new System.Drawing.Size(198, 20);
+            this.tbTelefone.Size = new System.Drawing.Size(440, 20);
             this.tbTelefone.TabIndex = 6;
             // 
             // tbCpf
             // 
-            this.tbCpf.Location = new System.Drawing.Point(98, 113);
-            this.tbCpf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCpf.Location = new System.Drawing.Point(106, 68);
+            this.tbCpf.Margin = new System.Windows.Forms.Padding(2);
             this.tbCpf.Name = "tbCpf";
-            this.tbCpf.Size = new System.Drawing.Size(193, 20);
+            this.tbCpf.Size = new System.Drawing.Size(440, 20);
             this.tbCpf.TabIndex = 5;
             // 
             // tbNome
             // 
-            this.tbNome.Location = new System.Drawing.Point(98, 64);
-            this.tbNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNome.Location = new System.Drawing.Point(106, 21);
+            this.tbNome.Margin = new System.Windows.Forms.Padding(2);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(825, 20);
+            this.tbNome.Size = new System.Drawing.Size(440, 20);
             this.tbNome.TabIndex = 4;
             // 
             // label3
@@ -171,10 +171,10 @@ namespace SistemaAtelie.Formularios
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(394, 107);
+            this.label3.Location = new System.Drawing.Point(23, 113);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 33);
+            this.label3.Size = new System.Drawing.Size(79, 27);
             this.label3.TabIndex = 3;
             this.label3.Text = "Telefone";
             // 
@@ -183,10 +183,10 @@ namespace SistemaAtelie.Formularios
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(51, 107);
+            this.label2.Location = new System.Drawing.Point(23, 61);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 33);
+            this.label2.Size = new System.Drawing.Size(45, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "CPF";
             // 
@@ -195,10 +195,10 @@ namespace SistemaAtelie.Formularios
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(38, 60);
+            this.label1.Location = new System.Drawing.Point(23, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 33);
+            this.label1.Size = new System.Drawing.Size(58, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome";
             // 
@@ -207,15 +207,15 @@ namespace SistemaAtelie.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SistemaAtelie.Properties.Resources.Textura_5;
-            this.ClientSize = new System.Drawing.Size(1426, 839);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(907, 452);
             this.Controls.Add(this.btVoltar);
             this.Controls.Add(this.dgCliente);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCliente";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

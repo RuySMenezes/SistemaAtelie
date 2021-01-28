@@ -51,9 +51,10 @@ namespace SistemaAtelie.Formularios
             lbRelatorio.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lbRelatorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             lbRelatorio.LinkColor = System.Drawing.Color.White;
-            lbRelatorio.Location = new System.Drawing.Point(548, 9);
+            lbRelatorio.Location = new System.Drawing.Point(411, 7);
+            lbRelatorio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbRelatorio.Name = "lbRelatorio";
-            lbRelatorio.Size = new System.Drawing.Size(150, 46);
+            lbRelatorio.Size = new System.Drawing.Size(118, 37);
             lbRelatorio.TabIndex = 10;
             lbRelatorio.TabStop = true;
             lbRelatorio.Text = "Pesquisa";
@@ -66,9 +67,10 @@ namespace SistemaAtelie.Formularios
             lbEstoque.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lbEstoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             lbEstoque.LinkColor = System.Drawing.Color.White;
-            lbEstoque.Location = new System.Drawing.Point(193, 9);
+            lbEstoque.Location = new System.Drawing.Point(145, 7);
+            lbEstoque.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbEstoque.Name = "lbEstoque";
-            lbEstoque.Size = new System.Drawing.Size(150, 46);
+            lbEstoque.Size = new System.Drawing.Size(121, 37);
             lbEstoque.TabIndex = 9;
             lbEstoque.TabStop = true;
             lbEstoque.Text = "Produtos";
@@ -81,9 +83,10 @@ namespace SistemaAtelie.Formularios
             lbVenda.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lbVenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             lbVenda.LinkColor = System.Drawing.Color.White;
-            lbVenda.Location = new System.Drawing.Point(384, 9);
+            lbVenda.Location = new System.Drawing.Point(288, 7);
+            lbVenda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbVenda.Name = "lbVenda";
-            lbVenda.Size = new System.Drawing.Size(111, 46);
+            lbVenda.Size = new System.Drawing.Size(90, 37);
             lbVenda.TabIndex = 8;
             lbVenda.TabStop = true;
             lbVenda.Text = "Venda";
@@ -96,9 +99,10 @@ namespace SistemaAtelie.Formularios
             lbCliente.Font = new System.Drawing.Font("Segoe Script", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lbCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             lbCliente.LinkColor = System.Drawing.Color.White;
-            lbCliente.Location = new System.Drawing.Point(12, 9);
+            lbCliente.Location = new System.Drawing.Point(9, 7);
+            lbCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbCliente.Name = "lbCliente";
-            lbCliente.Size = new System.Drawing.Size(139, 46);
+            lbCliente.Size = new System.Drawing.Size(109, 37);
             lbCliente.TabIndex = 11;
             lbCliente.TabStop = true;
             lbCliente.Text = "Clientes";
@@ -110,8 +114,9 @@ namespace SistemaAtelie.Formularios
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(-2, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(2522, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(1892, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -120,33 +125,33 @@ namespace SistemaAtelie.Formularios
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe Script", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(489, 225);
+            this.label1.Font = new System.Drawing.Font("Segoe Script", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(33, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(928, 199);
+            this.label1.Size = new System.Drawing.Size(496, 106);
             this.label1.TabIndex = 12;
             this.label1.Text = "Mimos Ateliê";
             // 
             // frmTelaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::SistemaAtelie.Properties.Resources.Textura_5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(907, 452);
             this.Controls.Add(this.label1);
             this.Controls.Add(lbRelatorio);
             this.Controls.Add(lbVenda);
             this.Controls.Add(lbCliente);
             this.Controls.Add(lbEstoque);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmTelaPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Principal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
