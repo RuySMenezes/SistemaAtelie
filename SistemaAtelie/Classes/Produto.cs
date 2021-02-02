@@ -29,6 +29,7 @@ namespace SistemaAtelie.Classes
 
         }
 
+        //Filtro
         public DataTable filtroProduto(string filtro)
         {
             cmd.CommandText = "SELECT * FROM Produto WHERE idProduto LIKE '%"+ filtro + "%' or Nome LIKE '%"+ filtro + "%' or Valor LIKE '%" + filtro + "%' or Quantidade LIKE '%" + filtro + "%' or Descricao LIKE '%" + filtro + "%'; ";

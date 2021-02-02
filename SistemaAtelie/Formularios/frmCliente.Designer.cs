@@ -32,6 +32,8 @@ namespace SistemaAtelie.Formularios
             this.btVoltar = new System.Windows.Forms.Button();
             this.dgCliente = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbPesquisa = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btExcluir = new System.Windows.Forms.Button();
             this.btEditar = new System.Windows.Forms.Button();
             this.btCadastrar = new System.Windows.Forms.Button();
@@ -41,8 +43,6 @@ namespace SistemaAtelie.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,12 +77,11 @@ namespace SistemaAtelie.Formularios
             this.dgCliente.Size = new System.Drawing.Size(1117, 332);
             this.dgCliente.TabIndex = 8;
             this.dgCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCliente_CellClick);
-            
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.tbPesquisa);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btExcluir);
             this.panel1.Controls.Add(this.btEditar);
@@ -99,6 +98,26 @@ namespace SistemaAtelie.Formularios
             this.panel1.Size = new System.Drawing.Size(1117, 205);
             this.panel1.TabIndex = 9;
             // 
+            // tbPesquisa
+            // 
+            this.tbPesquisa.Location = new System.Drawing.Point(150, 136);
+            this.tbPesquisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPesquisa.Name = "tbPesquisa";
+            this.tbPesquisa.Size = new System.Drawing.Size(585, 22);
+            this.tbPesquisa.TabIndex = 14;
+            this.tbPesquisa.TextChanged += new System.EventHandler(this.tbPesquisa_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label4.Location = new System.Drawing.Point(31, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 33);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Pesquisa:";
+            // 
             // btExcluir
             // 
             this.btExcluir.BackColor = System.Drawing.Color.White;
@@ -113,6 +132,7 @@ namespace SistemaAtelie.Formularios
             this.btExcluir.TabIndex = 12;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.UseVisualStyleBackColor = false;
+            this.btExcluir.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btExcluir_MouseClick);
             // 
             // btEditar
             // 
@@ -161,7 +181,6 @@ namespace SistemaAtelie.Formularios
             this.tbCpf.Name = "tbCpf";
             this.tbCpf.Size = new System.Drawing.Size(221, 22);
             this.tbCpf.TabIndex = 5;
-            
             // 
             // tbNome
             // 
@@ -204,31 +223,11 @@ namespace SistemaAtelie.Formularios
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(31, 129);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 33);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Pesquisa:";
-            
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(150, 136);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(585, 22);
-            this.textBox1.TabIndex = 14;
-            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SistemaAtelie.Properties.Resources.Textura_5;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1209, 664);
             this.Controls.Add(this.btVoltar);
@@ -259,7 +258,7 @@ namespace SistemaAtelie.Formularios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbPesquisa;
         private System.Windows.Forms.Label label4;
     }
 }

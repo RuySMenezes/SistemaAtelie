@@ -21,6 +21,14 @@ namespace SistemaAtelie.Formularios
             listagem();
         }
 
+        private void limpar()
+        {
+            tbNome.Text = null;
+            tbCpf.Text = null;
+            tbTelefone.Text = null;
+           
+        }
+
         //Listagem de Produtos
         private void listagem()
         {
@@ -68,6 +76,7 @@ namespace SistemaAtelie.Formularios
             Classes.Cliente cliente = new Classes.Cliente(nome, cpf, telefone);
             cliente.cadastrarCliente();
             listagem();
+            limpar();
         }
 
         private void btEditar_MouseClick(object sender, MouseEventArgs e)
@@ -81,8 +90,33 @@ namespace SistemaAtelie.Formularios
             cliente.editarCliente();
 
             listagem();
+            limpar();
         }
 
-        
+        private void tbPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            Classes.Cliente filtro = new Classes.Cliente();
+            try
+            {
+                dgCliente.DataSource = filtro.filtroCliente(tbPesquisa.Text);
+                Console.WriteLine(tbPesquisa.Text);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("filtro Falhou! Verifique a conexão com o banco");
+            }
+        }
+
+        private void btExcluir_MouseClick(object sender, MouseEventArgs e)
+        {
+            string nome = tbNome.Text;
+            int cpf = Int32.Parse(tbCpf.Text), telefone = Int32.Parse(tbTelefone.Text);
+
+            Classes.Cliente cliente = new Classes.Cliente(nome, cpf, telefone, idCliente);
+            cliente.excluirCliente();
+
+            listagem();
+            limpar();
+        }
     }
 }

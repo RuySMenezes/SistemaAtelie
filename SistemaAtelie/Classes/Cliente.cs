@@ -29,6 +29,43 @@ namespace SistemaAtelie.Classes
         }
 
 
+        public DataTable filtroCliente(string filtro)
+        {
+            cmd.CommandText = "SELECT * FROM Cliente WHERE idCliente LIKE '%" + filtro + "%' or Nome LIKE '%" + filtro + "%' or Cpf LIKE '%" + filtro + "%' or Telefone LIKE '%" + filtro + "%' ; ";
+
+
+            Console.WriteLine(filtro);
+            try
+            {
+                //conectar com banco
+                cmd.Connection = conexao.conectar();
+                //executar comando
+                cmd.ExecuteNonQuery();
+                //desconectar
+                conexao.desconectar();
+                //mostrar mensagem de erro ou sucesso
+                this.mensagem = "Filtrado!!";
+                SqlDataAdapter adaptador = new SqlDataAdapter();
+                adaptador.SelectCommand = cmd;
+                DataTable mamaco = new DataTable();
+                adaptador.Fill(mamaco);
+
+                conexao.desconectar();
+                Console.WriteLine(mensagem);
+
+                return mamaco;
+            }
+            catch (SqlException e)
+            {
+                this.mensagem = e.ToString();
+
+                //desconectar
+                conexao.desconectar();
+                Console.WriteLine(mensagem);
+
+                return null;
+            }
+        }
         //Cadastrar Produto
         public void cadastrarCliente()
         {
@@ -130,5 +167,42 @@ namespace SistemaAtelie.Classes
                 return null;
             }
         }
+
+        public void excluirCliente()
+        {
+            //Comando Sql -- insert, update, delete
+            cmd.CommandText = "DELETE  from Cliente  WHERE idCliente = @id";
+
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            try
+            {
+                //conectar com banco
+                cmd.Connection = conexao.conectar();
+                //executar comando
+                cmd.ExecuteNonQuery();
+                //desconectar
+                conexao.desconectar();
+                //mostrar mensagem de erro ou sucesso
+                this.mensagem = "Deletado!!";
+
+
+
+            }
+            catch (SqlException e)
+            {
+                this.mensagem = e.ToString();
+
+                //desconectar
+                conexao.desconectar();
+                Console.WriteLine(mensagem);
+
+
+            }
+        }
+
     }
+
+
 }
