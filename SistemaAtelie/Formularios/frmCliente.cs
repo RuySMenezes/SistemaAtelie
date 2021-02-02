@@ -83,11 +83,6 @@ namespace SistemaAtelie.Formularios
             listagem();
         }
 
-        private void dgCliente_Click(object sender, EventArgs e)
-        {
-
-        }
-
         
     }
 }

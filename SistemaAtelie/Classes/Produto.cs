@@ -29,7 +29,43 @@ namespace SistemaAtelie.Classes
 
         }
 
+        public DataTable filtroProduto(string filtro)
+        {
+            cmd.CommandText = "SELECT * FROM Produto WHERE idProduto LIKE '%"+ filtro + "%' or Nome LIKE '%"+ filtro + "%' or Valor LIKE '%" + filtro + "%' or Quantidade LIKE '%" + filtro + "%' or Descricao LIKE '%" + filtro + "%'; ";
 
+            
+            Console.WriteLine(filtro);
+            try
+            {
+                //conectar com banco
+                cmd.Connection = conexao.conectar();
+                //executar comando
+                cmd.ExecuteNonQuery();
+                //desconectar
+                conexao.desconectar();
+                //mostrar mensagem de erro ou sucesso
+                this.mensagem = "Filtrado!!";
+                SqlDataAdapter adaptador = new SqlDataAdapter();
+                adaptador.SelectCommand = cmd;
+                DataTable mamaco = new DataTable();
+                adaptador.Fill(mamaco);
+
+                conexao.desconectar();
+                Console.WriteLine(mensagem);
+
+                return mamaco;
+            }
+            catch (SqlException e)
+            {
+                this.mensagem = e.ToString();
+
+                //desconectar
+                conexao.desconectar();
+                Console.WriteLine(mensagem);
+
+                return null;
+            }
+        }
         //Cadastrar Produto
         public void cadastrarProduto()
         {
@@ -140,7 +176,7 @@ namespace SistemaAtelie.Classes
         public void excluirProduto()
         {
             //Comando Sql -- insert, update, delete
-            cmd.CommandText = "DELETE * from Produto  WHERE idProduto = @id";
+            cmd.CommandText = "DELETE  from Produto  WHERE idProduto = @id";
 
             
             cmd.Parameters.AddWithValue("@id", id);

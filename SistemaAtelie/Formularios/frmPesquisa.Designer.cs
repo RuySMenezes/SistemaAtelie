@@ -39,7 +39,7 @@ namespace SistemaAtelie.Formularios
             this.btVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btVoltar.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btVoltar.Location = new System.Drawing.Point(60, 821);
+            this.btVoltar.Location = new System.Drawing.Point(38, 566);
             this.btVoltar.Name = "btVoltar";
             this.btVoltar.Size = new System.Drawing.Size(131, 65);
             this.btVoltar.TabIndex = 11;
@@ -52,12 +52,11 @@ namespace SistemaAtelie.Formularios
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SistemaAtelie.Properties.Resources.Textura_5;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1209, 664);
             this.Controls.Add(this.btVoltar);
             this.Name = "frmPesquisa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPesquisa";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

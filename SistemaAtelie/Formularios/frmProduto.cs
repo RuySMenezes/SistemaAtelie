@@ -22,6 +22,7 @@ namespace SistemaAtelie.Formularios
         {
             InitializeComponent();
             listagem();
+            
 
         }
 
@@ -41,7 +42,15 @@ namespace SistemaAtelie.Formularios
 
         }
 
+        //Limpar textbox
+        private void limpar()
+        {
+            tbNome.Text = null;
+            tbValor.Text = null;
+            tbDescricao.Text = null;
+            tbQuantidade.Text = null;
 
+        }
 
         #region Eventos
 
@@ -83,6 +92,7 @@ namespace SistemaAtelie.Formularios
             Classes.Produto produto = new Classes.Produto(nome, valor, descricao, quantidade);
             produto.cadastrarProduto();
             listagem();
+            limpar();
 
         }
 
@@ -96,6 +106,7 @@ namespace SistemaAtelie.Formularios
             produto.editarProduto();
 
             listagem();
+            limpar();
         }
 
         //Formulario Carregado
@@ -118,26 +129,21 @@ namespace SistemaAtelie.Formularios
             produto.excluirProduto();
 
             listagem();
+            limpar();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void tbPesquisa_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void tbValor_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btCadastrar_Click(object sender, EventArgs e)
-        {
-
+            Classes.Produto filtro = new Classes.Produto();
+            try
+            {
+                dgProduto.DataSource = filtro.filtroProduto(tbPesquisa.Text);
+                Console.WriteLine(tbPesquisa.Text);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("filtro Falhou! Verifique a conexão com o banco");
+            }
         }
     }
 }
